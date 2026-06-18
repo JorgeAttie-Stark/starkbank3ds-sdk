@@ -1,0 +1,1 @@
+export {Stark3DS} from './src/stark3ds.js';
