@@ -1,8 +1,9 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { clearScriptLoadState, loadScript } from '../../../providers/braspag/scriptLoader.js';
+import { getConfig } from '../../../providers/braspag/config.js';
 
-const URL_SANDBOX = 'https://mpisandbox.braspag.com.br/Scripts/BP.Mpi.3ds20.min.js';
-const URL_PROD = 'https://mpi.braspag.com.br/Scripts/BP.Mpi.3ds20.min.js';
+const URL_SANDBOX = getConfig('sandbox').scriptUrl;
+const URL_PROD = getConfig('production').scriptUrl;
 const MPI_SCRIPT_ELEMENT_ID = 'stark-3ds-mpi-script';
 
 function getScript() {
