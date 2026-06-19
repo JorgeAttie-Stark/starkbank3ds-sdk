@@ -33,7 +33,7 @@ Esse módulo resolve **centralizar URLs e constantes de ambiente Braspag num ún
 ```mermaid
 flowchart TD
     A[providers/braspag/index.js] -->|environment sandbox ou production| B[getConfig]
-    B -->|hit| C[{ code, scriptUrl }]
+    B -->|hit| C[code e scriptUrl]
     B -->|miss| D[throw Error Environment not found]
     C -->|scriptUrl| E[scriptLoader.js loadScript]
     C -->|code SDB ou PRD| F[renderHiddenFields.js bpmpi_*]
