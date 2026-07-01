@@ -1,1 +1,1 @@
-export {Stark3DS} from './src/stark3ds.js';
+export {Stark3DS} from './stark3ds.js';
